@@ -22,4 +22,4 @@ if(!$connect) {
     // Set the character set to UTF-8
     mysqli_set_charset($connect, 'utf8');
 }
-?>
+?>s
