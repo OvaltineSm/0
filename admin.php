@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dpad Realtime Report (Holdable)</title>
   <style>
     body {
@@ -11,11 +12,12 @@
       padding: 0;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
     .dpad-container {
-      margin-top: 40px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -38,6 +40,9 @@
       transition: background 0.2s;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       user-select: none;
+      display: flex; /* เพิ่ม */
+      justify-content: center; /* เพิ่ม */
+      align-items: center; /* เพิ่ม */
     }
     .dpad-btn:active {
       background: #2563eb;
@@ -49,6 +54,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       padding: 16px;
+      /* ไม่ต้อง fixed */
     }
     .report-title {
       font-weight: bold;
@@ -58,12 +64,22 @@
     .report-log {
       font-size: 16px;
       color: #333;
-      min-height: 80px;
-      max-height: 160px;
+      height: 160px; /* fix ความสูง */
       overflow-y: auto;
       background: #f8fafc;
       border-radius: 6px;
       padding: 8px;
+    }
+    @media (max-width: 576px) {
+      .report-container {
+        width: 95%;
+        padding: 12px;
+      }
+      .dpad-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
     }
   </style>
 </head>
