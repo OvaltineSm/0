@@ -100,14 +100,12 @@
   <div><a href="form_login.php">กลับไปยังหน้า Login</a></div>
   <script>
     const reportLog = document.getElementById('reportLog');
-    // ฟังก์ชันเพิ่มข้อความและส่งข้อมูลไปยังเซิร์ฟเวอร์
     function addLog(direction) {
       const now = new Date();
       const time = now.toLocaleTimeString();
       const text = `[${time}] กดปุ่ม: ${direction}`;
       reportLog.innerHTML = text + '<br>' + reportLog.innerHTML;
     
-      // ส่งข้อมูลไปยังเซิร์ฟเวอร์
       fetch('save_command.php', {
         method: 'POST',
         headers: {
@@ -120,9 +118,6 @@
       .catch(error => console.error('Error:', error));
     }
 
-    // ส่วนที่เหลือเหมือนเดิม...
-
-    // Map direction to text
     function getDirText(dir) {
       switch(dir) {
         case 'up': return 'ขึ้น (UP)';
