@@ -98,7 +98,7 @@
     <div class="report-title">Realtime Report</div>
     <div class="report-log" id="reportLog"></div>
   </div>
-  <div><a href="form-login.php">กลับไปยังหน้า Login</a></div>
+  <div><a href="form_login.php">กลับไปยังหน้า Login</a></div>
   <script>
     const reportLog = document.getElementById('reportLog');
     function addLog(direction) {
@@ -106,6 +106,16 @@
       const time = now.toLocaleTimeString();
       const text = `[${time}] กดปุ่ม: ${direction}`;
       reportLog.innerHTML = text + '<br>' + reportLog.innerHTML;
+      fetch('save_command.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `direction=${encodeURIComponent(direction)}`
+      })
+      .then(response => response.json())
+      .then(data => console.log('Server response:', data))
+      .catch(error => console.error('Error:', error));
     }
 
     // Map direction to text
