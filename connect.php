@@ -1,7 +1,7 @@
 <?php
 
 if(!$open_connect = 1) {
-    die(header("Location: form-login.php"));
+    die(header("Location: form_login.php"));
     exit;
 } else {
     include_once 'connect.php';

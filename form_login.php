@@ -99,7 +99,7 @@
 <body>
     <div class="form-container">
         <h2>เข้าสู่ระบบ</h2>
-        <form action="process-login.php" method="POST">
+        <form action="process_login.php" method="POST">
             <div class="form-group">
                 <label for="email_account">อีเมล</label>
                 <input id="email_account" name="email_account" type="email" placeholder="อีเมล" required>
@@ -110,7 +110,7 @@
             </div>
             <button type="submit" class="button">เข้าสู่ระบบ</button>
             <div class="form-footer">
-                <a href="form-register.php">สมัครสมาชิก</a>
+                <a href="form_register.php">สมัครสมาชิก</a>
             </div>
         </form>
     </div>

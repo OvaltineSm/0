@@ -100,7 +100,7 @@
 <body>
     <div class="form-container">
         <h2>ลงทะเบียน</h2>
-        <form action="process-register.php" method="post">
+        <form action="process_register.php" method="post">
             <div class="form-group">
                 <input name="username_account" type="text" placeholder="ชื่อผู้ใช้" required>
             </div>
@@ -115,7 +115,7 @@
             </div>
             <button type="submit" class="button">สร้างบัญชี</button>
             <div class="form-footer">
-                <a href="form-login.php">มีบัญชีแล้วใช่ไหม</a>
+                <a href="form_login.php">มีบัญชีแล้วใช่ไหม</a>
             </div>
         </form>
     </div>

@@ -8,7 +8,7 @@ if(isset($_POST['email_account']) && isset($_POST['password_account'])) {
     $password_account = htmlspecialchars(mysqli_real_escape_string($connect, $_POST['password_account']));
 
     if(empty($email_account) || empty($password_account)) {
-        die(header("Location: form-login.php?error=empty_fields"));
+        die(header("Location: form_login.php?error=empty_fields"));
         exit;
     } else {
         $query_check_email = "SELECT * FROM account WHERE email_account = '$email_account'";
@@ -29,16 +29,16 @@ if(isset($_POST['email_account']) && isset($_POST['password_account'])) {
 
                 }
             } else {
-                die(header("Location: form-login.php?error=incorrect_password"));
+                die(header("Location: form_login.php?error=incorrect_password"));
                 exit;
             }
         } else {
-            die(header("Location: form-login.php?error=email_not_found"));
+            die(header("Location: form_login.php?error=email_not_found"));
             exit;
         }
     }
 } else {
-    header("Location: form-login.php");
+    header("Location: form_login.php");
     exit;
 }
 ?>
