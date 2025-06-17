@@ -40,9 +40,9 @@
       transition: background 0.2s;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       user-select: none;
-      display: flex; /* เพิ่ม */
-      justify-content: center; /* เพิ่ม */
-      align-items: center; /* เพิ่ม */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .dpad-btn:active {
       background: #2563eb;
