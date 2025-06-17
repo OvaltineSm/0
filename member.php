@@ -54,7 +54,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       padding: 16px;
-      /* ไม่ต้อง fixed */
     }
     .report-title {
       font-weight: bold;
@@ -64,7 +63,7 @@
     .report-log {
       font-size: 16px;
       color: #333;
-      height: 160px; /* fix ความสูง */
+      height: 160px;
       overflow-y: auto;
       background: #f8fafc;
       border-radius: 6px;
